@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lib/jqgrid/css/ui.jqgrid.css">
+    <link rel="stylesheet" href="lib/jqgrid/css/jquery-ui-1.8.16.custom.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div ng-controller="controllerOuter">
+        <div class="nav">
+            <ul>
+                <li ng-click="tabClick('tab1')" ng-class="{'active': isTab1Active}">tab1</li>
+                <li ng-click="tabClick('tab2')" ng-class="{'active': isTab2Active}">tab2</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div ng-include="includeUrl"></div>
+        </div>
+    </div>
+<script src="lib/requirejs/require.js" data-main="js/index.js"></script>
+</body>
+</html>
